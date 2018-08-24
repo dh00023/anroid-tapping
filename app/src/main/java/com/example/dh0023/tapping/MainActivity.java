@@ -27,9 +27,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 Log.d("myTag", url);
                 if (url.contains("camera")) {
+                    Log.d("camera", url);
+                    //카메라를 실행하지 않고 Activity를 하나 더 만들어서 그 위에 카메라 화면을 올릴거야
 
-                    //카메라 실행하는 코드
-                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    //activity 하나 더 만들어서 그걸 띄우기
+                    Intent intent = new Intent(getApplicationContext(), CameraActivity.class);
                     startActivity(intent);
 
                     return true;
