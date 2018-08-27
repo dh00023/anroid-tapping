@@ -1,49 +1,39 @@
 package com.example.dh0023.tapping;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
+import android.view.SurfaceView;
 import android.view.View;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
 public class CameraActivity extends AppCompatActivity {
-    RelativeLayout container;
-
+    public RelativeLayout container;
+    public Button mBuyButton;
+    public WebView mWebView;
+    public ItemInfoView mItemInfoView;
+    public SurfaceView mSurfaceView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
-    }
-
-    public void onBtnClicked(View view){
-        container = (RelativeLayout) findViewById(R.id.container);
-        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.item_info,container,true);
-        final Button button = (Button)findViewById(R.id.button);
-        button.setVisibility(View.INVISIBLE);
-    }
-
-    public void buyBtnClicked(View view){
 
         container = (RelativeLayout) findViewById(R.id.container);
-        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.buy,container,true);
+        mItemInfoView = (ItemInfoView) findViewById(R.id.iteminfo_view);
+        mSurfaceView = (SurfaceView) findViewById(R.id.camera_view);
+        init();
+    }
 
-        WebView web = (WebView)findViewById(R.id.buyView);
-        web.setWebViewClient(new WebViewClient());
+    private void init() {
 
-        WebSettings webSettings = web.getSettings();
-        webSettings.setJavaScriptEnabled(true);
+    }
 
+    public void onBtnClicked(View view) {
+        final Button button = (Button) findViewById(R.id.button);
+        button.setVisibility(View.GONE);
 
-        web.loadUrl("http://display.cjmall.com/m/item/49595372/itemOrderOption?isNeededInterface=true&channelCode=30001001");
-
-
+        mItemInfoView.setVisibility(View.VISIBLE);
     }
 }
