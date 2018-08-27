@@ -82,7 +82,7 @@ layoutinflater를 이용해서 버튼을 클릭하면 상품정보레이어가 �
 그래서 우선적으로 CameraActivity에서 구매창이 뜨도록 하는 버튼 이벤트 처리를 따로 구현해보았다.
 `webView.loadUrl("http://display.cjmall.com/m/item/49595372/itemOrderOption?isNeededInterface=true&channelCode=30001001");`
 
-1. 웹뷰를 위에 얹으면 아래의 글과 이미지가 사라진다. 이걸 어떻게 해야하나요? 새로운 뷰를 생성해서 그게 연결되도록 해야하나요?
+1. 웹뷰를 그냥 이미지와 상품정보 위에 얹었는데 아래의 글과 이미지가 사라져요.. 이걸 어떻게 해야하나요? 새로운 레이아웃을 생성해서 그게 연결되도록 해야하나요?
 2. 의문점! url로 바로구매버튼을 눌렀을 경우 그 웹뷰 내부에서 바로 cjmall바로구매페이지로 이동하게 되는데 그럼 이건 `shouldOverrideUrlLoading`에서 새로운 Activity로 연결해서 뜨게 하는건가요?
 
 

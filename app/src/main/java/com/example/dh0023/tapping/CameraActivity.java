@@ -24,14 +24,17 @@ public class CameraActivity extends AppCompatActivity {
     public void onBtnClicked(View view){
         container = (RelativeLayout) findViewById(R.id.container);
         LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.product_info,container,true);
+        inflater.inflate(R.layout.item_info,container,true);
         final Button button = (Button)findViewById(R.id.button);
         button.setVisibility(View.INVISIBLE);
-
-
     }
 
     public void buyBtnClicked(View view){
+
+        container = (RelativeLayout) findViewById(R.id.container);
+        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.buy,container,true);
+
         WebView web = (WebView)findViewById(R.id.buyView);
         web.setWebViewClient(new WebViewClient());
 
@@ -40,10 +43,7 @@ public class CameraActivity extends AppCompatActivity {
 
 
         web.loadUrl("http://display.cjmall.com/m/item/49595372/itemOrderOption?isNeededInterface=true&channelCode=30001001");
-        final Button button1 = (Button)findViewById(R.id.btnBuy);
-        button1.setVisibility(View.INVISIBLE);
 
-        final Button button2 = (Button)findViewById(R.id.btnItem);
-        button2.setVisibility(View.INVISIBLE);
+
     }
 }
