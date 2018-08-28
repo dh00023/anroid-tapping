@@ -31,6 +31,7 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
     private static final int RESULT_PERMISSIONS = 888;
     private RelativeLayout container;
     private Button mBuyButton;
+    private ImageButton mItemButton;
     private WebView mWebView;
     private ItemInfoView mItemInfoView;
     private SurfaceView mCameraView;
@@ -40,6 +41,7 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
     private ImageView mLogoRightImage;
     private ImageView mFirstItemImage;
     private ImageView mSecondItemImage;
+    private ImageView mPreItemImage;
     private Subscription mTimer;
 
     @Override
@@ -56,6 +58,9 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
         mLogoRightImage = (ImageView) findViewById(R.id.logo_image_right);
         mFirstItemImage = (ImageView) findViewById(R.id.item_image_first);
         mSecondItemImage = (ImageView) findViewById(R.id.item_image_second);
+
+        mPreItemImage = (ImageView) findViewById(R.id.mPreItemImage);
+        mItemButton = (ImageButton) findViewById(R.id.tapBtn);
 
         requestPermissionCamera();
     }
@@ -95,12 +100,17 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
                                 break;
 
                             case 4:
-                                mFirstItemImage.setVisibility(View.VISIBLE);
-                                break;
+//                                mFirstItemImage.setVisibility(View.VISIBLE);
+                                mLogoLeftImage.setVisibility(View.GONE);
+                                mLogoRightImage.setVisibility(View.GONE);
+                                mItemButton.setVisibility(View.VISIBLE);
+                                mPreItemImage.setVisibility(View.VISIBLE);
 
-                            case 6:
-                                mSecondItemImage.setVisibility(View.VISIBLE);
                                 break;
+//
+//                            case 6:
+//                                mSecondItemImage.setVisibility(View.VISIBLE);
+//                                break;
 
                         }
                     }
