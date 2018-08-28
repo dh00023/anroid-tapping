@@ -21,6 +21,7 @@ public class OrderActivity extends AppCompatActivity {
         // 바로구매 버튼으로 연결되는 url주소는 구매창이 제대로 뜨지 않고, 임의로 주소를 입력하면 뜨는데..!!
         // webView.loadUrl("https://base.cjmall.com/m/order/sheet/201808270122904665");
         Intent getIntent = getIntent();
+
         String landingUrl = getIntent.getStringExtra("url");
         if(!TextUtils.isEmpty(landingUrl)){
             webView.loadUrl(landingUrl);
