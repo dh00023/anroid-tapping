@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -126,7 +127,7 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
      * @param view
      */
     public void onBtnClicked(View view) {
-        final Button button = (Button) findViewById(R.id.button);
+        final ImageButton button = (ImageButton) findViewById(R.id.tapBtn);
         button.setVisibility(View.GONE);
 
         mItemInfoView.setVisibility(View.VISIBLE);
