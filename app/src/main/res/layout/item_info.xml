@@ -70,7 +70,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="#ff4887"
-                android:onClick="buyBtnClicked"
                 android:text="구매"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
@@ -81,7 +80,7 @@
     </LinearLayout>
 
 
-    <WebView
+    <com.example.dh0023.tapping.CustomWebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="200dp"

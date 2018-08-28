@@ -35,6 +35,51 @@
         android:id="@+id/iteminfo_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/logo_image_left"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/transparent_border"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/logo_image_right"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/transparent_border"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_image_first"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/transparent_border"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_image_second"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/transparent_border"
+        android:visibility="gone" />
 
 </RelativeLayout>
