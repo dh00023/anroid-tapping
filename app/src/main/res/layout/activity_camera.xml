@@ -39,7 +39,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:scaleType="centerInside"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo"
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/logo_image_right"
@@ -50,7 +51,8 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:scaleType="centerInside"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo"
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/item_image_first"
