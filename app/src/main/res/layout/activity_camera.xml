@@ -10,7 +10,9 @@
     <SurfaceView
         android:id="@+id/camera_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
     <RelativeLayout
         android:id="@+id/container"
@@ -30,27 +32,25 @@
 
     <ImageView
         android:id="@+id/logo_image_left"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="130dp"
+        android:layout_height="75dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:scaleType="centerInside"
-        android:background="@drawable/logo"
-        android:visibility="gone" />
+        android:src="@drawable/logo" />
 
     <ImageView
         android:id="@+id/logo_image_right"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="130dp"
+        android:layout_height="75dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:scaleType="centerInside"
-        android:background="@drawable/logo"
-        android:visibility="gone" />
+        android:src="@drawable/logo" />
 
     <ImageView
         android:id="@+id/item_image_first"
@@ -78,12 +78,30 @@
         android:id="@+id/tapBtn"
         android:layout_width="41dp"
         android:layout_height="43dp"
-        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
         android:background="@android:color/transparent"
         android:onClick="onBtnClicked"
         android:scaleType="centerInside"
-        android:visibility="gone"
         app:srcCompat="@drawable/point" />
+
+    <ImageButton
+        android:id="@+id/tapBtn2"
+        android:layout_width="41dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="145dp"
+        android:visibility="gone"
+        android:layout_marginTop="116dp"
+        android:background="@android:color/transparent"
+        android:onClick="onBtnClicked"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/point"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="145dp" />
 
     <ImageView
         android:id="@+id/mPreItemImage"

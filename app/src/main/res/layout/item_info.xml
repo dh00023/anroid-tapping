@@ -91,6 +91,17 @@
         android:background="@android:color/transparent"
         android:visibility="gone" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="43dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        app:srcCompat="@drawable/heart"
+        android:layout_alignParentRight="true" />
+
 
 </RelativeLayout>
 

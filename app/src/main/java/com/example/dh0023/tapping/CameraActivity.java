@@ -32,6 +32,7 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
     private RelativeLayout container;
     private Button mBuyButton;
     private ImageButton mItemButton;
+    private ImageButton mItemButton2;
     private WebView mWebView;
     private ItemInfoView mItemInfoView;
     private SurfaceView mCameraView;
@@ -39,8 +40,8 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
     private Camera mCamera;
     private ImageView mLogoLeftImage;
     private ImageView mLogoRightImage;
-    private ImageView mFirstItemImage;
-    private ImageView mSecondItemImage;
+//    private ImageView mFirstItemImage;
+//    private ImageView mSecondItemImage;
     private ImageView mPreItemImage;
     private Subscription mTimer;
 
@@ -56,11 +57,12 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
 
         mLogoLeftImage = (ImageView) findViewById(R.id.logo_image_left);
         mLogoRightImage = (ImageView) findViewById(R.id.logo_image_right);
-        mFirstItemImage = (ImageView) findViewById(R.id.item_image_first);
-        mSecondItemImage = (ImageView) findViewById(R.id.item_image_second);
+//        mFirstItemImage = (ImageView) findViewById(R.id.item_image_first);
+//        mSecondItemImage = (ImageView) findViewById(R.id.item_image_second);
 
         mPreItemImage = (ImageView) findViewById(R.id.mPreItemImage);
         mItemButton = (ImageButton) findViewById(R.id.tapBtn);
+        mItemButton2 = (ImageButton) findViewById(R.id.tapBtn2);
 
         requestPermissionCamera();
     }
@@ -99,11 +101,12 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
                                 mLogoRightImage.setVisibility(View.VISIBLE);
                                 break;
 
-                            case 4:
+                            case 3:
 //                                mFirstItemImage.setVisibility(View.VISIBLE);
                                 mLogoLeftImage.setVisibility(View.GONE);
                                 mLogoRightImage.setVisibility(View.GONE);
                                 mItemButton.setVisibility(View.VISIBLE);
+                                mItemButton2.setVisibility(View.VISIBLE);
                                 mPreItemImage.setVisibility(View.VISIBLE);
 
                                 break;
@@ -137,8 +140,9 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
      * @param view
      */
     public void onBtnClicked(View view) {
-        final ImageButton button = (ImageButton) findViewById(R.id.tapBtn);
-        button.setVisibility(View.GONE);
+
+        mItemButton.setVisibility(View.GONE);
+        mItemButton2.setVisibility(View.GONE);
 
         mItemInfoView.setVisibility(View.VISIBLE);
     }

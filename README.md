@@ -75,22 +75,16 @@ manifiest에 인터넷 권한 설정해주기
 4. 새로운 Activity 생성후  shouldOverrideUrlLoading에서 연결하기
 5. 상품 정보 뜨는 레이아웃 만들기
 	- [참조페이지](http://wimir-dev.tistory.com/11)
+6. 김민수님 - 카메라 연결 부분 전체적으로 수정해주심
+7. 세부사항 수정
 
-
-**질문하기**
-layoutinflater를 이용해서 버튼을 클릭하면 상품정보레이어가 나타나도록 구현했다. 그런데 상품정보레이어에 있는 button의 event처리가 안된다.
-그래서 우선적으로 CameraActivity에서 구매창이 뜨도록 하는 버튼 이벤트 처리를 따로 구현해보았다.
-`webView.loadUrl("http://display.cjmall.com/m/item/49595372/itemOrderOption?isNeededInterface=true&channelCode=30001001");`
-
-1. 웹뷰를 그냥 이미지와 상품정보 위에 얹었는데 아래의 글과 이미지가 사라져요.. 이걸 어떻게 해야하나요? 새로운 레이아웃을 생성해서 그게 연결되도록 해야하나요?
-2. 의문점! url로 바로구매버튼을 눌렀을 경우 그 웹뷰 내부에서 바로 cjmall바로구매페이지로 이동하게 되는데 그럼 이건 `shouldOverrideUrlLoading`에서 새로운 Activity로 연결해서 뜨게 하는건가요?
 
 
 
 
 - [Display image from url](https://stackoverflow.com/questions/3118691/android-make-an-image-at-a-url-equal-to-imageviews-image)
-
-
+- [imageView Devise 오류](https://stackoverflow.com/questions/30844395/image-showing-in-android-studio-but-not-on-phone/40487304)
+    - 이미지크기때문이었다.
 
 
 ### 상품정보
@@ -98,3 +92,26 @@ layoutinflater를 이용해서 버튼을 클릭하면 상품정보레이어가 �
 - [스톤헨지 귀걸이](http://display.cjmall.com/p/item/49595372?channelCode=30001001&k=%EC%8A%A4%ED%86%A4%ED%97%A8%EC%A7%80)
 
 
+```xml
+<ImageView
+        android:id="@+id/item_image_first"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/transparent_border"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_image_second"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/transparent_border"
+        android:visibility="gone" />
+```
