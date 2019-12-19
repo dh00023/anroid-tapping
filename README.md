@@ -1,6 +1,15 @@
-# Tap-ping 개발
+# CJ ENM onlyone fair : Tap-ping
 
-### 180824
+## 주제
+
+컨텐츠와 소비자를 연결하는 신개념 서비스로 시청자가 원하는 순간에 원하는 상품을 드라마/예능 시청 흐름에 방해 없이, 영상 속 상품을 바로 찾고 구매하는 서비스
+
+![](./app1.png)
+![](./app2.png)
+
+- 발표시 시연할 안드로이드 앱
+
+## 개발
 
 1. CJmall 마크업 해오기
 2. Android Studio WebView 이용해서 html파일 불러오기
@@ -75,11 +84,8 @@ manifiest에 인터넷 권한 설정해주기
 4. 새로운 Activity 생성후  shouldOverrideUrlLoading에서 연결하기
 5. 상품 정보 뜨는 레이아웃 만들기
 	- [참조페이지](http://wimir-dev.tistory.com/11)
-6. 김민수님 - 카메라 연결 부분 전체적으로 수정해주심
+6. 김민수님 - 카메라 연결 부분 전체적으로 수정
 7. 세부사항 수정
-
-
-
 
 
 - [Display image from url](https://stackoverflow.com/questions/3118691/android-make-an-image-at-a-url-equal-to-imageviews-image)
@@ -115,3 +121,4 @@ manifiest에 인터넷 권한 설정해주기
         android:background="@drawable/transparent_border"
         android:visibility="gone" />
 ```
+
